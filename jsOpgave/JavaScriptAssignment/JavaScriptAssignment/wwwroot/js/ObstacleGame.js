@@ -3,6 +3,7 @@
     var myScore;
     var myGameObstacles = [];
     var lastUpdatedFrame = 0;
+    var obstacleInterval = 150;
 
     function startGame() {
         myGamePiece = new component(30, 30, "orange", 10, 120);
@@ -216,10 +217,8 @@
         if (myGamePiece.y < 0) { myGamePiece.y = 0; }
         if (myGamePiece.y + myGamePiece.height > myGameArea.canvas.height) { myGamePiece.y = myGameArea.canvas.height - myGamePiece.height; }
 
-        var interval = Math.floor(Math.random() * 100);
 
-        if (interval < 40) interval = 40;
-        if (myGameArea.frameNo == 1 || everyInterval(interval)) {
+        if (myGameArea.frameNo == 1 || everyInterval(obstacleInterval)) {
             x = myGameArea.canvas.width;
             minHeight = 50;
             maxHeight = 200;
@@ -229,13 +228,13 @@
             gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
             myGameObstacles.push(new component(10, height, "gray", x, 0));
             myGameObstacles.push(new component(10, x - height, "gray", x, height + gap));
+            if (obstacleInterval > 40) obstacleInterval += 1;
         }
 
         for (i = 0; i < myGameObstacles.length; i += 1) {
             console.log("Game obstacle no. " + i + " - " + myGameObstacles[i].x);
             myGameObstacles[i].x += -3;
             myGameObstacles[i].update();
-            console.log(myGameObstacles[i].x);
         }
 
         myScore.text = "SCORE: " + myGameArea.frameNo;
@@ -257,6 +256,7 @@
     document.getElementById("reset").onclick =
         function () {
             clearInterval(myGameArea.interval);
+            obstacleInterval = 150;
             myGameObstacles.length = 0;
             myGameArea.frameNo = 0;
             myGamePiece.x = 20;
