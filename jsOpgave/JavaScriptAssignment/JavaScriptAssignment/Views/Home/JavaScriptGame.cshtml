@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "JavaScript game";
+}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1>JavaScript game</h1>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-sm-auto d-flex justify-content-center">
+                <canvas id="obstacleGame"></canvas>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h3>Top score: <em id="score"></em></h3>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <button id="reset" class="btn-info btn">Reset game</button>
+            </div>
+        </div>
+    </div>
+
+<script src="~/js/ObstacleGame.js"></script>
