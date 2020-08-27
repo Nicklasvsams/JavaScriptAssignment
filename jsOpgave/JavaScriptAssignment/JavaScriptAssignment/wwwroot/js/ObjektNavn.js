@@ -1,10 +1,11 @@
 ﻿document.addEventListener("DOMContentLoaded", function (event) {
-    var mitObjekt = {
+    var myObject = {
         fornavn: "Nicklas",
         efternavn: "Sams"
     }
+
     function getName() {
-        return "Mit navn er " + mitObjekt.fornavn + " " + mitObjekt.efternavn;
+        return "Mit navn er " + myObject.fornavn + " " + myObject.efternavn;
     }
 
     document.getElementById("objektNavn").textContent = getName();
