@@ -1,6 +1,9 @@
+// Ensures that the DOM content has been properly loaded before running script
 document.addEventListener("DOMContentLoaded", function (event) {
+    // Access token for the API
     mapboxgl.accessToken = 'pk.eyJ1Ijoibmlja2xhc3ZzYW1zIiwiYSI6ImNrZWR2aTFhZzB3a3cydHA3OTdna3M2YWQifQ.aCB7Q6nsiM3BvQrCAC_8Tg';
 
+    // Instantiation of the map
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -8,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         zoom: 3
     });
 
+    // Instantiation of the mapmarkers
     var geojson = {
         type: 'FeatureCollection',
         features: [{
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         ]
     };
 
+    // Creation of elements for each marker we've instantiated
     geojson.features.forEach(function (marker) {
         // create a HTML element for each feature
         var el = document.createElement('div');
