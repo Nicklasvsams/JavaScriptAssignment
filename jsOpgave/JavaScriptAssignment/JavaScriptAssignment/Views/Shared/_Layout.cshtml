@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="MapBox" asp-action="Index">Mapbox map</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Atoa" asp-action="Index">Contact A-to-A</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -45,16 +48,16 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
+        <div id="sharedfooter" class="container">
             &copy; 2020 - JavaScript assignment
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/VisDag.js"></script>
-    <script src="~/js/MetodeNavn.js"></script>
-    <script src="~/js/ObjektNavn.js"></script>
+    <script src="~/js/visdag.js"></script>
+    <script src="~/js/metodenavn.js"></script>
+    <script src="~/js/objektnavn.js"></script>
     <script src="~/js/mapbox.js"></script>
     @RenderSection("Scripts", required: false)
 </body>

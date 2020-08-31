@@ -1,5 +1,3 @@
-using System;
-
 namespace JavaScriptAssignment.Models
 {
     public class ErrorViewModel
