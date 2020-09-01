@@ -25,7 +25,7 @@
             {
                 // Uses the streamwriter to append messages to a text document. Preferably you'd use a database to store this.
                 using (var file = 
-                    new System.IO.StreamWriter(@"C:\Users\nics\Desktop\NVS\Opgaver\Opgave 8 - JavaScript\ContactAndCounter\contact.txt", true))
+                    new System.IO.StreamWriter(@"C:\Users\nics\Desktop\NVS\Opgaver\Opgave 8 - JavaScript\Contact\contact.txt", true))
                 {
                     file.Write(DateTime.Now.ToString()
                         + Environment.NewLine

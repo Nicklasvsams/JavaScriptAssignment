@@ -19,21 +19,6 @@
             return View();
         }
 
-        public IActionResult JavaScript()
-        {
-            return View();
-        }
-
-        public IActionResult JavaScriptGame()
-        {
-            return View();
-        }
-
-        public IActionResult MapboxMap()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
